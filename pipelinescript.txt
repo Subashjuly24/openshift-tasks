@@ -9,7 +9,7 @@ node {
   stage('Tag Image') {
     openshift.withCluster() {
       openshift.withProject("bfb6-tasks") {
-        openshift.tag("openshift-tasks:latest", "openshift-tasbfb6-tasksks:${BUILD_NUMBER}")
+        openshift.tag("bfb6-tasksks:latest", "bfb6-tasksks:${BUILD_NUMBER}")
       }
     }
   }
